@@ -1,0 +1,3 @@
+[submodule "stealthmate.github.io"]
+	path = stealthmate.github.io
+	url = git@github.com:Stealthmate/stealthmate.github.io.git
