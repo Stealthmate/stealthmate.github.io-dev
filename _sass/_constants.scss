@@ -24,6 +24,18 @@ $font-size-heading-large: 3rem;
   }
 }
 
+$font-size-2nd-heading: 1.3rem;
+$font-size-2nd-heading-medium: 2rem;
+$font-size-2nd-heading-large: 2.5rem;
+@mixin font-2nd-heading {
+  font-size: $font-size-2nd-heading;
+  @media screen and (min-width: 501px) {
+    font-size: $font-size-2nd-heading-medium;
+  }
+  @media screen and (min-width: 1370px) {
+    font-size: $font-size-2nd-heading-large;
+  }
+}
 
 $font-size-content: 1rem;
 $font-size-content-medium: 1.2rem;
@@ -53,6 +65,7 @@ $font-size-note-large: 1.3rem;
 
 
 $post-side-margin: 5vw;
+$post-text-margin-very-wide: 5vh;
 $post-text-margin-wide: 3vh;
 $post-text-margin-narrow: 1.5vh;
 

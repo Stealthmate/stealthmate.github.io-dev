@@ -14,11 +14,11 @@
     height: 100%;
 
     circle {
-      fill: $color-background-dark;;
+      fill: $color-background-light;
     }
 
     line {
-      stroke: $color-background-light;;
+      stroke: $color-text;
       stroke-width: 10;
     }
   }
