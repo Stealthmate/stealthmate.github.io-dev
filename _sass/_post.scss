@@ -1,37 +1,11 @@
 @import 'theme_common';
-
-h1, h2 {
-  margin-top: $post-text-margin-wide;
-  margin-bottom: $post-text-margin-narrow;
-}
-
-h1 {
-  font-size: $font-size-title;
-}
-
-h2 {
-  font-size: $font-size-heading;
-}
-
-
-header .abstract, article p {
-  font-size: $font-size-content;
-}
-
-article img, article .kdmath {
-  margin: $post-text-margin-wide auto;
-}
-
-
-
+@import 'post_small';
+@import 'post_medium';
+@import 'post_large';
 
 p {
   text-align: justify;
   margin: 0;
-}
-
-header, main {
-  margin: 20px 20px 10px 20px;
 }
 
 article > h2:first-child {
@@ -40,14 +14,9 @@ article > h2:first-child {
 
 header {
   .post-date {
-    font-size: $font-size-small;
-      color: $color-text-faded;
+    color: $color-text-faded;
     label {
       display: inline-block;
-      width: 110px;
-    }
-    time {
-      margin-left: 3px;
     }
   }
 
@@ -59,7 +28,6 @@ header {
 hr {
   margin: $post-text-margin-narrow $post-side-margin;
   width: 90%;
-  align-self: center;
 }
 
 article {
@@ -74,7 +42,18 @@ article {
   }
 
   img {
-    max-width: 100%;
     display: block;
   }
+
+  img.small {
+    width: 40%;
+  }
+
+  .kdmath {
+    display: block;
+    width: 95%;
+    align-self: center;
+    overflow-x: auto;
+  }
+
 }

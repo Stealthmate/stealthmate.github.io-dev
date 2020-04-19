@@ -1,0 +1,8 @@
+@media screen and (min-width: 1400px) {
+  $font-size-title: 4rem;
+  $font-size-heading: 3rem;
+  $font-size-content: 1.4rem;
+  $font-size-small: 1.3rem;
+
+  @import 'post_small';
+}
