@@ -1,23 +1,23 @@
 ---
-layout: default
+layout: post_md
 toc: true
-title: A mathematical justification for the assumption the electric field around an infinite charged cylinder is orthogonal to its surface
+title: Why is the electric field around a cylinder orthogonal to the side?
+last_edit: 2020-04-19
+abstract: I have recently been reading on electrodynamics and in my textbook I encountered the problem of calculating the electric field around an infinite charged cylinder using Gauss's law. The author of the book solved this on the assumption that the field is always orthogonal to any concentric cylinder around the charge. However, I thought this assumption needs a justification and so I spent a considerable amount of time proving it with rigorous mathematics.
 ---
 
-# Preface
-
-$$
+## Preface
+$
 \gdef\vec#1{\mathbf{#1}}
 \gdef\abs#1{\lvert #1 \rvert}
-$$
+$
+I have recently been reading on electrodynamics and in my textbook I encountered the problem of calculating the electric field around an infinite charged cylinder using Gauss's law. The author of the book solved this on the assumption that the field is always orthogonal to any concentric cylinder around the charge. That is, it looks like this when viewed from the top
 
-I have recently been reading on electrodynamics and in my textbook I encountered the problem of calculating the electric field around an infinite charged cylinder using Gauss's law. The author of the book solved this on the assumption that the field is always orthogonal to any concentric cylinder around the charge. That is, it looks like this when viewed fro m the top
-
-<img style="margin: auto; width: 500px; display: block;" src="{{ '/assets/images/01-cylinder-vector-field.png' | relative_url }}" />
+<img src="{{ '/assets/images/01-cylinder-vector-field.png' | relative_url }}" />
 
 I understand the intuitive reasoning behind this, however I was looking for a mathematical proof of that, and since I didn't find one, I constructed one myself. In this post I have layed out my process of reasoning and I hope that it will help other people as well.
 
-# Stating the problem mathematically
+## Stating the problem mathematically
 
 Given a cylinder with radius $R$, bounded by the surface
 
@@ -25,7 +25,7 @@ $$
 F(x, y, z) = x^2 + y^2 - R^2 = 0
 $$
 
-and having uniform volume charge density $\rho$, show that the electric field at any pointoutside $F$, that is, any point $\vec p = (x_p, y_p, z_p)$ such that $x_p^2 + y_p^2 > R$, the total electric field is a scalar multiple of the surface normal
+and having *uniform* volume charge density $\rho$, show that the electric field at any point outside $F$, that is, any point $\vec p = (x_p, y_p, z_p)$ such that $x_p^2 + y_p^2 > R$, the total electric field is a scalar multiple of the surface normal
 
 $$
 \vec E(\vec p) = c\vec n = c\nabla F = c\begin{pmatrix}
@@ -39,9 +39,19 @@ where $c$ is some constant and the electric field is given by integrating Coulom
 
 $$\vec E(\vec p) = \frac{\rho}{4\pi\epsilon_0}\iiint_V \frac{\vec p - \vec x}{\abs{\vec p - \vec x}^3} dv$$
 
-Note that in the above, $\rho$ is uniform throughout the cylinder and can therefore be brought out of the integral as a constant.
+Note that in the above, $\rho$ is uniform throughout the cylinder and can therefore be brought out of the integral as a constant. Furthermore, if we use cylindrical coordinates, we have
 
-# Part 1 - Solving for the $z$ dimension
+$$
+\begin{aligned}
+\Delta v &= \frac{1}{2}((r + \Delta r)^2 - r^2)\Delta\theta \Delta z \\
+&= \frac{1}{2}(2r\Delta r + (\Delta r^2))\Delta\theta \Delta z \\
+&= r\Delta r\Delta\theta \Delta z + (\Delta r^2)\Delta\theta \Delta z
+\end{aligned}
+$$
+
+When constructing the integral, we apply a limit over this
+
+## Part 1 - Solving for the $z$ dimension
 
 First, we will show that for any $\vec p$ outside of the cylinder, the electric field's $z$ component at that point is zero. Let
 
@@ -122,7 +132,7 @@ $$
 
 Thus we have finally shown that the electric field's $z$ component is zero for any point outside the cylinder.
 
-# Part 2 - Solving for the $x$ and $y$ dimensions
+## Part 2 - Solving for the $x$ and $y$ dimensions
 
 First, we will show that for a point $\vec p$ outside of the cylinder, its projection on the $z = 0$ plane is parallel to the normal of $F$. Take
 
@@ -314,4 +324,4 @@ $$
 \vec E(\vec p) = \frac{cR}{r_p}\vec n
 $$
 
-Q.E.D.
+{% include qed.html %}
