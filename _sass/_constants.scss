@@ -1,18 +1,56 @@
 $font-size-title: 1.8rem;
 $font-size-title-medium: 2.8rem;
 $font-size-title-large: 4rem;
+@mixin font-title {
+  font-size: $font-size-title;
+  @media screen and (min-width: 501px) {
+    font-size: $font-size-title-medium;
+  }
+  @media screen and (min-width: 1370px) {
+    font-size: $font-size-title-large;
+  }
+}
 
 $font-size-heading: 1.5rem;
 $font-size-heading-medium: 2.3rem;
 $font-size-heading-large: 3rem;
+@mixin font-heading {
+  font-size: $font-size-heading;
+  @media screen and (min-width: 501px) {
+    font-size: $font-size-heading-medium;
+  }
+  @media screen and (min-width: 1370px) {
+    font-size: $font-size-heading-large;
+  }
+}
+
 
 $font-size-content: 1rem;
 $font-size-content-medium: 1.2rem;
 $font-size-content-large: 1.4rem;
+@mixin font-content {
+  font-size: $font-size-content;
+  @media screen and (min-width: 501px) {
+    font-size: $font-size-content-medium;
+  }
+  @media screen and (min-width: 1370px) {
+    font-size: $font-size-content-large;
+  }
+}
 
 $font-size-note: .9rem;
 $font-size-note-medium: 1.1rem;
 $font-size-note-large: 1.3rem;
+@mixin font-note {
+  font-size: $font-size-note;
+  @media screen and (min-width: 501px) {
+    font-size: $font-size-note-medium;
+  }
+  @media screen and (min-width: 1370px) {
+    font-size: $font-size-note-large;
+  }
+}
+
 
 $post-side-margin: 5vw;
 $post-text-margin-wide: 3vh;

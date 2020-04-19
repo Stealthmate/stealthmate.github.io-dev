@@ -1,25 +1,25 @@
 @import 'constants';
 
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  padding: 0;
+  @include font-note;
+
+  a {
+    margin: 0 10px;
+  }
+}
+
 h1 {
-  font-size: $font-size-title;
-  @media screen and (min-width: 501px) {
-    font-size: $font-size-title-medium;
-  }
-  @media screen and (min-width: 1370px) {
-    font-size: $font-size-title-large;
-  }
+  @include font-title;
 }
 
 .post-date {
   color: $color-text-faded;
-
-  font-size: $font-size-note;
-  @media screen and (min-width: 501px) {
-    font-size: $font-size-note-medium;
-  }
-  @media screen and (min-width: 1370px) {
-    font-size: $font-size-note-large;
-  }
+  @include font-note;
 
   label {
     display: inline-block;
@@ -81,24 +81,11 @@ article {
 }
 
 h2 {
-  font-size: $font-size-heading;
-  @media screen and (min-width: 501px) {
-    font-size: $font-size-heading-medium;
-  }
-  @media screen and (min-width: 1370px) {
-    font-size: $font-size-heading-large;
-  }
+  @include font-heading;
 }
 
 p, .kdmath {
-  width: 100%;
-  font-size: $font-size-content;
-  @media screen and (min-width: 501px) {
-    font-size: $font-size-content-medium;
-  }
-  @media screen and (min-width: 1370px) {
-    font-size: $font-size-content-large;
-  }
+  @include font-content;
 }
 
 p {
