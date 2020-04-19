@@ -3,7 +3,8 @@
   <head>
     {% include head.html %}
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/css/home.css" | relative_url }}">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
     <main>
@@ -12,11 +13,18 @@
           {{ page.title }}
         </h1>
       </header>
-      <section>
-        {% for post in site.posts %}
-        <a href="{{ post.url | relative_url }}">{{ post.date | slice: 0, 10 }} - {{ post.title }}</a>
-        {% endfor %}
-      </section>
+      <article>
+        <section id="posts">
+          {% for post in site.posts %}
+          {% assign myvar = post.title %}
+          {% include excerpt.html %}
+          {% endfor %}
+        </section>
+      </article>
+      <footer>
+        <a href="https://twitter.com/stealthmate_val?ref_src=twsrc%5Etfw" class="twitter-follow-button sns-button" data-show-count="false">Follow @stealthmate_val</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="sns-button github-button" href="https://github.com/stealthmate" aria-label="Follow @stealthmate on GitHub">Follow @stealthmate</a>
+      </footer>
     </main>
   </body>
 </html>
