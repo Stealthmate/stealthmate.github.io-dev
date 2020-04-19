@@ -1,37 +1,3 @@
+@import 'common';
 @import 'theme_default';
 @import 'excerpt';
-
-html, body, main {
-  height: 100%;
-  background: $color-background;
-  color: $color-text;
-}
-
-a {
-  color: $color-text;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  margin: 3px;
-}
-
-footer {
-  background: $color-background-dark;
-  position: absolute;
-  bottom: 0;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-footer > * {
-  margin: 20px 15px;
-}

@@ -1,19 +1,11 @@
-
-.MathJax_Display {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow-y: visible;
-    align-self: center;
+.kdmath {
+  width: 95%;
+  align-self: center;
+  overflow-x: auto;
 }
 
-.MathJax_Display, div.highlight {
-    overflow-x: auto;
-}
-
-.MathJax_Display::after {
-    // content: 'スクロールできます';
-    display: block;
-    align-self: center;
-    margin-top: 0;
-    font-size: 10px;
+.qed {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-size: 1rem;
+  font-style: italic;
 }
