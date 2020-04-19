@@ -280,7 +280,7 @@ For brevity, we take the formula in the square braces as $K$.
 
 ---
 
-Now we need to show that $\vec E(\vec p)_y = \frac{\rho\sin\theta_p}{4\pi\epsilon_0}. Similar to $I_x$, we find that
+Now we need to show that $\vec E(\vec p)_y = \frac{\rho\sin\theta_p}{4\pi\epsilon_0}$. Similar to $I_x$, we find that
 
 $$
 \begin{aligned}
